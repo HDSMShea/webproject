@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+</head>
+<header> 
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <!--Here we use flexbox-->
+  <div class="flexbox-container">
+      <div class="logo">
+          <img src="Media/global.png" alt="Logo">
+  </div>
+      
+      <div class="box-2">
+          <p class="classID">ITWD6.408</p>
+      </div>
+      <div class="box-3">
+          <div class="horizontal-nav">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="form.html">FORMS</a></li>
+                <li><a href="xml-json.html">XML/JSON</a></li>
+                <li><a href="javascript.html">JAVASCRIPT</a></li>
+                <li class="active"><a href="my-research.html">RESEARCH</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="box-4">
+          <p onclick="openNav()">≡</p>
+      </div>
+  </div>
+
+  <!-- This is the curtain menu, default is collapsed when loading page-->
+  <nav id="curtain-nav">
+      <a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+        <div class="curtain-nav-content">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="form.html">FORMS</a></li>
+            <li><a href="xml-json.html">XML/JSON</a></li>
+            <li><a href="javascript.html">JAVASCRIPT</a></li>
+            <li class="active"><a href="my-research.html">RESEARCH</a></li>	
+          </ul>
+        </div>
+  </nav>
+</div>
+
+
+</header>
+
+
+<body>
+<!--using the same structure from the index.html page just seperating classes for better CSS customizability-->
+    <section class ="Rflipboxcont">
+
+        <article>
+            <div class="Rflip-box">
+                <div class="Rflip-box-inner">
+                  <div class="Rflip-box-front">
+                    <h5>Copyright, Creative Common (CC) Licenses, Fair Use</h5>
+                    <div class = "Rflip-portrait">
+                    <img src="http://d2klr1ixr44jla.cloudfront.net/0/0/assets/images/551326f8b13b7baa41000047.png" />
+                    </div>                    
+                  </div>
+                  <div class="Rflip-box-back">
+                    <h5>The privacy policy principles ensures that:</h5>
+                    <p>
+"you know when your information is being collected
+your information is used and shared appropriately
+your information is kept safe and secure
+you can get access to your information"
+<a href="https://www.privacy.org.nz/privacy-act-2020/privacy-principles/">Privacy Act 2020 and the Privacy Principles</a>
+                    </p>
+                    <img src="https://s3.amazonaws.com/libapps/customers/1265/images/cc-licenses-terms.png">
+                    
+                </div>
+              </div>
+        </article>
+
+        <article>
+            <div class="Rflip-box">
+                <div class="Rflip-box-inner">
+                  <div class="Rflip-box-front">
+                    <h5>Privacy & Privacy Policy</h5>
+                    <div class = "Rflip-portrait">
+                        <img src="https://www.oemserv.com/images/capital-xtra-privacy-policy-1490189881-article-0.jpg?crc=3776361221" />
+                    </div>
+                  </div>
+                  <div class="Rflip-box-back">
+                    <h5>What is a privacy policy?</h5>
+                    <p>A Privacy Policy is a statement or a legal document that states how a company or website collects, handles and processes data of its customers and visitors. It explicitly describes whether that information is kept confidential, or is shared with or sold to third parties.</p>
+                    <p>
+                      No information is being collected, this website has been constructed in order to complete an assignment.
+                      <a href ="https://www.privacypolicies.com/blog/privacy-policy-template/">privacy policies</a>
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>
+        </article>
+
+        <article>
+            <div class="Rflip-box">
+                <div class="Rflip-box-inner">
+                  <div class="Rflip-box-front">
+                    <h5>Search Engine Optimization</h5>
+                    <div class = "Rflip-portrait">
+                        <img src="https://fusionwrx.com/wp-content/uploads/2018/09/SEO-Image.jpeg" />
+                    </div>                     
+                  </div>
+                  <div class="Rflip-box-back">
+                    <h5>5 ways to improve your SEO</h5>
+                    <ul>
+                      <li> 1. understanding your online customers </li>
+                      <li> 2. Use keywords on your website</li>
+                      <li> 3. Refresh your page content often</li>
+                      <li> 4. gain refereials from other websites </li>
+                      <li> 5. use meta tags in your content </li>
+                    </ul>
+
+                    <a href ="https://www.wordstream.com/blog/ws/2014/08/14/increase-traffic-to-my-website">more info</a>
+                  </div>
+                </div>
+              </div>
+        </article>
+
+    </section>
+
+    <section class ="Rflipboxcont">
+
+        <article>
+            <div class="Rflip-box">
+                <div class="Rflip-box-inner">
+                  <div class="Rflip-box-front">
+
+                    <h5>Web Publishing/hosting</h5>
+                    <div class = "Rflip-portrait">
+                    <img src="https://fitsmallbusiness.com/wp-content/uploads/2022/01/Infographic_How_Web_Hosting_Works.png"  alt="html logo"/>
+                    </div>                    
+                  </div>
+                  <div class="Rflip-box-back">
+                    <h5>3 major factors you should consider when choosing a right web hosting provider</h5>
+                  <p>average uptime, page load time, and customer support.</p>
+                  <a href="https://www.hostpapa.co.nz/blog/web-hosting/11-key-considerations-when-choosing-your-web-hosting/#:~:text=Main%20Considerations,load%20time%2C%20and%20customer%20support.">More info</a>
+                  </div>
+                </div>
+              </div>
+        </article>
+
+        <article>
+            <div class="Rflip-box">
+                <div class="Rflip-box-inner">
+                  <div class="Rflip-box-front">
+                    <h5>Web Performance & Maintenance</h5>
+                    <div class = "Rflip-portrait">
+                      <img src="data:image/jpeg;base64,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"/>
+                    </div>
+                  </div>
+                  <div class="Rflip-box-back">
+                   <h6> Ways to reduce page loading time </h6>
+                    <ol>
+                      <li>Configure a fast infrastructure or use a fast host</li>
+                      <li>Use a Content Delivery Network </li>
+                      <li>Use Gzip for server side file compression</li>
+                      <li>Reduce the number of HTTP requests </li>
+                      <li>minimise CSS and JS</li>
+                    </ol>
+                    <a href="https://terakeet.com/blog/page-load-time/">more info</a>
+                      <h6>  important actions for maintaining a website</h6>
+                    <ol>
+                      <li>Review the webstites analyitics</li>
+                      <li>Backup the important data securely and safe</li>
+                      <li>If links become broken fix them</li>
+                      <li>Ensure device compatibility</li>
+                      <li>Test your website and performance before and after each update</li>
+                      <a href="https://www.comitdevelopers.com/going-beyond-web-hosting-importance-health-stability-maintenance/"> more info</a>
+                    </ol>
+                    
+                  </div>
+                </div>
+              </div>
+        </article>
+
+        <article>
+            <div class="Rflip-box">
+                <div class="Rflip-box-inner">
+                  <div class="Rflip-box-front">
+                    <h2>Web security</h2>
+                    <div class = "Rflip-portrait">
+                        <img src="https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1078369/cover-Redesign-WebSecurityVulnerabilities-Luke_Newsletter-04d5cdafdaf363f0bc6aa723a391c343-91ee4d294318c967b26187f4d67a8351.png" />
+                    </div>                     
+                  </div>
+                  <div class="Rflip-box-back">
+                    <h5> describe 5 common cyber attacks: </h5>
+                    <ol>
+                      <li>DDoS attack</li>
+                      <li> Phishing attack </li> 
+                    <li> Malware attack </li>
+                    <li>SQL Injection attack </li>
+                      <li> Cross site scripting attack </li>
+                    </ol>
+
+                    <a href="https://mindmajix.com/cyber-security-threats-and-prevention-methods">more info</a>
+                  </div>
+                </div>
+              </div>
+        </article>
+
+    </section>
+
+</body>
+
+
+      	<!--Embeded JS here-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>	
+          <script src="JS/javascript.js"></script>
+      
+   
+      <footer>
+        Created by Shea <br>
+        Email: ROLFES2@student.eit.ac.nz
+      </footer>
+      
+      </html>

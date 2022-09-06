@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<!-- setting or confirguration of the website-->
+<head>
+    <meta charset = "UTF-8">
+    <title>Lab-1</title>
+    <meta name = "viewport" content = "width = device-width">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<!-- everything visible on browser-->
+<body>
+
+    <!--Nav bar starts here-->
+    <header> 
+        <!--Here we use flexbox we define a flex box container for the nav bars CSS-->
+        <div class="flexbox-container">
+            <div class="logo">
+                <img src="Media/global.png" alt="Logo">
+            </div>
+            <div class="box-2">
+                <p class="classID">ITWD6.408</p>
+            </div>
+            <div class="box-3">
+                <!--another box inside earlier box for site navigation with href links to other pages-->
+                <div class="horizontal-nav">
+                    <ul>
+                        <!--Active to represent which page you are on-->
+                        <li class="active"><a href="index.html">HOME</a></li>
+                        <li><a href="form.html">FORMS</a></li>
+						<li><a href="xml-json.html">XML/JSON</a></li>
+						<li><a href="javascript.html">JAVASCRIPT</a></li>
+						<li><a href="my-research.html">RESEARCH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--This box contains java script function for opening the curtain nav-->
+            <div class="box-4">
+                <p onclick="openNav()">≡</p>
+            </div>
+        </div>
+        <!-- This is the curtain menu, default is collapsed when loading page-->
+        <nav id="curtain-nav">
+            <a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="form.html">FORMS</a></li>
+					<li><a href="xml-json.html">XML/JSON</a></li>
+					<li><a href="javascript.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+        </nav>
+    </div>
+    </header>
+<!--end of nav bar-->
+
+ <!--Start of main content area-->
+<main>
+   
+    <!--Setup for first section containing a blured background and content box-->
+    <section class = 'showcase'>
+        <div class ="backimg"> </div>   
+            <div class = "bg-text">
+                <h1> Shea Rolfe</h1>
+                <p> I am a web developer </p>
+            </div>
+    </section>
+    <!--End of first section of 3-->
+
+
+    <!--setup for second section containing a flex container of 2 columns or rows depending on screen size-->
+    <section class = "flexcont">
+        <!-- this article is used to contain one column's content-->
+        <article class = "bio">
+            <h1> BIO </h1>
+            <div class = "portrait-photograph">
+                <!--Creating a div to hold the icon for CSS manipulation-->
+                <div class = "bio-portrait">
+                    <img src="Media\portrait-icon.jpg"/>
+                </div>
+            </div>
+            <p class = "bio-paragraph"> 
+                Shea Rolfe, born and raised in Gisborne.<br>
+                I like computers, gaming and sports specifically football.<br>
+                I enrolled in the BCS program to help secure IT jobs for my career.
+            </p>
+        </article>
+        <article class="webtechno">
+            <h1>My web technologies</h1>
+            <p> My top 5 technologies <br>
+                <!--using ol for an ordered list-->
+            <ol class="list">
+                <li> Visual Studio code, a code editor that is robust and intuitive</li>
+                <li> Google drive, storing and backing up work files aswel as peer to peer sharing on colaborative works </li>
+                <li> Portable SSD's for taking work on the go</li>
+                <li> GIT hub, Hosting repositries for colaboration or reference</li>
+                <li> Steam, a gaming service that allows purchasing of games & launching of said games also game save storage/cloud sync</li>
+            </ol>
+        </article>
+
+    </section>
+<!--end of second section of 3-->
+
+<!--start of the flip box section 3/3-->
+    <article class = "title"> 
+           <h1> My Web development Competencies </h1>
+    </article>
+<!-- declaring the container which will hold the flip boxes-->
+    <section class ="flipboxcont">
+        <!--the article containing the first flip box-->
+        <article>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <!--declaring content area for the default side of the flip box-->
+                  <div class="flip-box-front">
+                    <h2>Mark-up</h2>
+                    <h2>(HTML5)</h2>
+                    <!--setting up the class that will change the image's CSS-->
+                    <div class = "flip-portrait">
+                        <img src="Media\html5.png"  alt="html logo"/>
+                    </div>                    
+                  </div>
+                  <!--This class is setup to be the content area of the back of the flip box-->
+                  <div class="flip-box-back">
+                    <h2>3/5</h2>
+                    <p>I could improve on reading html documents and understanding what the code represents. <br>
+                    This limits my ability to quickly debug or insert reference code thus decreasing the overall ability of HTML code development. </p>
+                  </div>
+                </div>
+              </div>
+        </article>
+<!-- second article containing second flip box-->
+        <article>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    
+                  <div class="flip-box-front">
+                    <h2>Styling</h2><h2>(CSS)</h2>
+                    <div class = "flip-portrait">
+                        <img src="Media\css3.png"/>
+                    </div>
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>4/5</h2>
+                      <p>CSS is alot easier to corelate to outlined classes so I am able to trial and error alot of parameters with ease. <br>
+                        I stand to gain alot if i invested more study in bootstrap as that allows for fast/simple CSS in a nutshell. </p>
+                  </div>
+                </div>
+              </div>
+        </article>
+
+        <article class="border box">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <h2>Interactivity</h2><h2>(JavaScript)</h2>
+                    <div class = "flip-portrait">
+                        <img src="Media\javascript.png" />
+                    </div>                     
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>2/5</h2>
+                    <p>The java script syntax and functions can get quite complex and fails to resemble any natural language forms. <br>
+                    This makes it personally the hardest languages to code in but with the use of websites such as java script cheet sheet it is easier to figure out what scripts to use and when.</p>
+                  </div>
+                </div>
+              </div>
+        </article>
+
+    </section>
+
+
+</main>
+<!--Creating a section for the statement of authenticity-->
+<section>
+    <div class = "soa">
+    <h2> Statement of authenticity</h2>
+    <p>I confirm that:</p>
+        <p>This is an original assessment and is entirely my own work.</p>
+        It contains no material previously published or written by another person or myself except where due acknowledgement 
+        is made in the text. No material which to a substantial extent, has been submitted for any other academic course, is 
+        included without acknowledgement.” </p>
+    </div>
+</section>
+<!--setting up footer to conclude website-->
+    <footer>
+        Created by Shea <br>
+        Email: ROLFES2@student.eit.ac.nz
+    </footer>
+    <!-- Link HTML document to JS-->
+    <script type="text/javascript" src="JS/indexJS.js">
+    </script>
+</body>
+</html>

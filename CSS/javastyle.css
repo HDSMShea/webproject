@@ -1,0 +1,270 @@
+
+
+body{
+
+    background: linear-gradient(0deg, rgba(139, 216, 103, 0.8) 0%, rgba(255, 254, 254, 0.8) 100%);
+    font-family: "Time New Roman", Times, serif;
+    font-size: 1.0 em;
+}
+header{
+
+    background: linear-gradient(0deg, rgba(139, 216, 103, 0.8) 0%, rgba(255, 254, 254, 0.8) 100%);
+    min-height:  0vh;
+}
+/*Define flexbox style for nav bar*/
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row; /*displays in a row/horizontally*/
+
+
+    background: linear-gradient(0deg, rgba(139, 216, 103, 0.8) 0%, rgba(255, 254, 254, 0.8) 100%);
+	min-height: 5vh;    
+}
+
+.box-1 {
+	flex: 0; /*logo image and tagline*/
+}
+
+.box-2 {
+    flex: 1; /*horizontal nav on desktop*/
+	
+	/*Centering the content both vertical and horizontal*/
+	display: flex;
+    font-size: 1.5cm;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-3 {
+    flex: 4;/*Curtain menu*/
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-4 {
+    flex: 1;/*Curtain menu*/
+	
+	font-size: 4.0em;
+	color: blue;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+.horizontal-nav {
+	display: none; /*Hide on mobile devices*/
+
+	background: linear-gradient(0deg, rgba(139, 216, 103, 0.8) 0%, rgba(255, 254, 254, 0.8) 100%);
+}
+
+nav {
+	padding: 10px 10px 10px 10px;/*10px 10px 10px 10px*/
+	overflow: visible; 
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+nav ul li ul li {
+	background: #555; 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+    background: linear-gradient(0deg, rgba(59, 59, 59, 0.8) 0%, rgba(78, 78, 78, 0.8) 100%);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	/*For curtain menu*/
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 2.0em;
+	color: white;
+	text-decoration: none;
+}
+
+/*Set hover effect for items in the menu*/
+.active {
+	background-color: #dd9393;
+}
+
+li:hover:not(.active) {
+	background-color: #ff3333;
+}
+
+main {
+    
+	background-color: #DAF7A6;
+    min-height: 85vh;
+
+	display: flex;
+	flex-direction:column;
+
+}
+
+* { box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* footer area for small device */
+footer{
+	background: rgb(139,216,103);
+	background: linear-gradient(180deg, rgba(139,216,103,1) 0%, rgba(255,254,254,1) 100%);
+    min-height: 15vh;
+    text-align: center;
+
+    /*Centering both vertical and horizontal*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*customize stle for big screen: tablet, laptop and desktop */
+@media screen and (min-width: 768px ) {
+    /*set style for big screen*/
+    /*on big screen, nav bar is displayed horizontally*/
+   /*Make Horizontal nav visible*/
+
+   .horizontal-nav {
+    display: block;
+        background-color: #DAF7A6; 
+     padding: 10px 10px 10px 10px;
+}
+
+.horizontal-nav ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+ }
+
+ .horizontal-nav ul li {
+     display: inline-block;
+     font-family: 'Oswald', sans-serif;
+     font-size: 1.0em;
+ }
+
+ .horizontal-nav ul li a {
+     display: block;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;	
+ }
+
+ .horizontal-nav ul li:hover:not(.active) {
+     background-color: rgb(55, 185, 164);
+	
+ }
+
+}

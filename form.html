@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Linking bootstrap for easy CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+
+
+    <header> 
+		<!--linkning CSS for the nav bar-->
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+
+        <div class="flexbox-container">
+            <div class="logo">
+                <img src="Media/global.png" alt="Logo">
+        </div>
+            
+            <div class="box-2">
+                <p class="classID">ITWD6.408</p>
+            </div>
+            <div class="box-3">
+                <div class="horizontal-nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="active"><a href="form.html">FORMS</a></li>
+						<li><a href="xml-json.html">XML/JSON</a></li>
+						<li><a href="javascript.html">JAVASCRIPT</a></li>
+						<li><a href="my-research.html">RESEARCH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-4">
+                <p onclick="openNav()">≡</p>
+            </div>
+        </div>
+
+
+        <nav id="curtain-nav">
+            <a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li class="active"><a href="form.html">FORMS</a></li>
+					<li><a href="xml-json.html">XML/JSON</a></li>
+					<li><a href="javascript.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+        </nav>
+
+
+    </div>
+
+
+    </header>
+<body>
+	<!--container to hold the buttons/forms-->
+	<div class="container-fluid">
+		<div class="row">
+			<!--Button section-->
+			<div class="col-12 col-md-2">
+				<div class="container-fluid">
+					<div class="row justify-content-around">
+						<!--Button 1 setup-->						
+						<button class="col-6 col-md-12 btn btn-primary bg-warning" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button1" 
+								aria-expanded="false" aria-controls="button1">HTML FORM</button>
+						<!--Button 2 setup-->
+						<button class="col-6 col-md-12 btn btn-primary" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button2" 
+								aria-expanded="false" aria-controls="button2">GOOGLE FORM</button>
+									 					
+					</div>			
+				</div>			
+			</div>
+			
+			<!--Main content section-->
+			<div class="col-12 col-md-10">
+				<div class="row">
+				  <div class="col-12">
+					<!--Content area 1 for button 1-->
+					<div class="collapse show multi-collapse" id="button1">
+
+				<hr>
+
+						<!--Declaring where the form is posting to-->
+				<form name= "survey" method="post" action="mailto:ROLFES2@student.eit.ac.nz">
+					<!--setting up the first form label and input-->
+					<div class="form-group row">
+						<label for="firstname" class="col-sm-2 col-form-label">First Name:</label>
+						<!--Input area is declared below-->
+						<div class="col-sm-8">
+						  <input type="text" id="firstname" name="fname" class="form-control"  placeholder="First Name" required> <!--This holds what parameters the input is asociated with-->
+						</div>
+					  </div>
+					  
+					  <div class="form-group row">
+						<label for="lastname" class="col-sm-2 col-form-label">Last Name:</label>
+						<div class="col-sm-8">
+						  <input type="text" name="lname" class="form-control" Id="lastname" placeholder="Last Name" required>
+						</div>
+					  </div>
+					  <div class="form-group row">
+						<h3>
+							Address
+						</h3>
+					   
+					  </div>
+					  <div class="form-group row mb-2">
+						<label for="address1" class="col-sm-2 col-form-label">Line 1:</label>
+						<div class="col-sm-8">
+						  <input type="text" name="address1" id="address1" class="form-control"  placeholder="Street name or P.O box" required>
+						</div>
+-					  </div>
+					  
+					  <div class="form-group row mb-2">
+						<label for="add2" class="col-sm-2 col-form-label">Line 2:</label>
+						<div class="col-sm-8">
+						  <input type="text" name="addresss2" id="add2" class="form-control"  placeholder="Line 2">
+						</div>
+					  </div>
+					  <div class="form-group row mb-2">
+						<label for="city"  class="col-sm-2 col-form-label">Town/City:</label>
+						<div class="col-sm-8">
+						  <input type="text" name="city" id="city" class="form-control"  placeholder="City">
+						</div>
+
+<!-- radio button starts -->
+
+        <fieldset class="row mb-3">
+			<!--setting the title for the form section -->
+            <legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
+            <div class="col-sm-10">
+            	<div class="form-check-inline">
+                	<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                	<!-- setting the label for the radio button-->
+					<label class="form-check-label" for="gridRadios1"> Male</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                Female
+                </label>
+            </div>
+            <div class="form-check-inline disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                <label class="form-check-label" for="gridRadios3">
+                 Other
+                </label>
+            </div>
+            </div>
+		</fieldset>
+
+<!-- end of radio button -->
+
+
+<!--- Start of inline checkbox -->
+
+<fieldset class="row">
+	<legend class="col-form-label col-sm-2 pt-0">Mobile Phone Type:</legend>
+	<div class="col-sm-9">
+
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">IOS</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Android</label>
+            </div>
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                <label class="form-check-label" for="inlineCheckbox3">Windows</label>
+            </div>
+
+            <div class="form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                <label class="form-check-label" for="inlineCheckbox3">other</label>
+            </div>
+		</fieldset>
+<!-- end of inline checkbox-->
+
+
+<!-- Drop down box -->
+
+<div class="form-group row">
+	<!--declaring the label for the drop down box-->
+	<label for="selectionOption" class="col-sm-2 col-form-label">Mobile provider:</label>
+	<div class="col-sm-2">
+		  <select class="form-control" id="exampleFormControlSelect1">
+			  <option>None</option>
+			  <option>Spark</option>
+			  <option>Vodafone</option>
+			  <option>Now</option>
+			  <option>Other</option>
+		</select>
+	</div>
+  </div>
+
+<!---end of drop down box-->
+<!--Start of the comment input area-->
+<div class="form-group row">
+	<div class="col-sm-10">
+		<legend class="col-form-label col-sm-8 pt-0">Do you use your phone for study? </legend><!-- The label of the comment box-->
+				<textarea class="form-control" id="exampleFormControlSelect1" rows="3" cols='50' required>  </textarea><!-- This is the comment box line of code-->
+			</div>
+<!-- end of comment input area-->			
+<!-- Start of the submit and reset buttons-->			
+			<div>
+				<input type="submit" name="submit" value="SUBMIT"/>
+				<input type="reset" name="reset" value="reset"/>
+			</div>
+			<hr>
+    </form>
+	<!--End of bootstrap form-->
+					  </div>
+					</div>
+				  </div>
+				  
+				  <!--Content area for button 2-->
+				  <div class="col-12">
+					<div class="collapse multi-collapse" id="button2">
+					  <div class="card card-body">GOOGLE FORM HERE<br>
+						<!--reference the google form prepared earlier-->
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_zfBCqSlHEt_juvCZ1vvtPRj90MBgSVT-Mgspc4tp57MKkg/viewform?embedded=true" width="640" height="1529" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+					  </div>
+					</div>
+				  </div>
+				</div>				
+			</div>		
+		</div>
+	</div>
+		
+	<!--linking the bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>	
+</body>
+
+<footer>
+	Created by Shea <br>
+	Email: ROLFES2@student.eit.ac.nz
+</footer>
+<!-- Link HTML document to JS-->
+<script type="text/javascript" src="JS/indexJS.js">
+</script>
+</html>
